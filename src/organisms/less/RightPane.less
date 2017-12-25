@@ -1,0 +1,166 @@
+.div-rightpane {
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    // background: rgba(70,130,180,0.5);
+    background: radial-gradient(ellipse at center,#81abdc 0,#2989d8 100%,#7db9e8 100%);
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: 0.5s;
+    padding: 10px 2.5%;
+    box-sizing: border-box;
+}
+
+input[type='text'], textarea {
+    border: 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    padding: 10px 15px;
+    margin: 2px;
+    font-size: 16px;
+    border-radius: 3px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+    display: inline-block;
+    height: 20px;
+    margin-right: 0;
+}
+
+input[type='text']:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+label {
+    width: 15%;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    min-width: 100px;
+    max-width: 130px;
+}
+
+.div-qncontainer {
+    margin-bottom: 60px;
+}
+
+.header-container {
+    width: 100%;
+    height: 45px;
+    height: 6.5vh;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    box-sizing: border-box;
+
+    h2 {
+        transition: 0.2s;
+    }
+
+    h2.select {
+        display: none;
+        color: #fff;
+    }
+
+    .icon-container {
+        display: none;
+    }
+}
+
+.div-RightPane-main-container {
+    margin-top: 50px;
+}
+
+
+@media only screen and (max-device-width : 1024px) and (min-device-width: 767px) {
+    .div-rightpane {
+        .div-RightPane-main-container {
+            margin-top: 30px;
+
+            label {
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+
+            textarea {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-device-width : 767px)  {
+
+
+    .div-rightpane {
+        width: 100%;
+        background: rgba(70,130,180,1);
+
+        textarea {
+            width: 100%;
+            margin: 15px auto;
+            display: inline-block;
+        }
+
+        .div-qncontainer {
+            padding-left: 12px;
+            padding-right: 12px;
+
+            .btn-img-upload {
+                width: 90%;
+            }
+        }
+
+        .icon-container {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #000;
+            margin: 6px 0;
+            transition: 0.35s;
+        }
+
+        h2 {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 5px 0;
+        }
+
+        .header-container {
+            position: fixed;
+            height: 60px;
+            z-index: 1;
+            box-sizing: border-box;
+            background-color: #4682b4;
+        }
+
+    }
+
+    .App.opened .div-rightpane {
+        overflow: hidden;
+
+        .header-container {
+            .select {
+                display: inline-block;
+            }
+
+            .design {
+                display: none;
+            }
+        }
+    }
+
+}
+
+

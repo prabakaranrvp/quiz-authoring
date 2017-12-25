@@ -1,0 +1,84 @@
+.lbl-option {
+    font-size: 18px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.div-options-container {
+    margin-bottom: 50px;
+    .plus, .minus {
+        margin: 20px;
+        margin-left: 10px;
+        font-size: 20px;
+        border: 2px solid #036;
+        color: #036;
+        border-radius: 50%;
+        padding: 3px 8px 5px 8px;
+        font-weight: bold;
+        cursor: pointer;
+        background: #fff;
+        transition: 0.1s linear;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .minus {
+        font-size: 28px;
+        padding: 0px 10px 2px 10px;
+        background: #C51D1D;
+        color: #fff;
+        border-color: #C51D1D;
+    }
+
+    .plus {
+        margin: 0;
+        background: #360;
+        color: #fff;
+        border-color: #360;
+    }
+
+    .plus:hover, &.enable .minus:hover {
+        transform: scale(1.15);
+    }
+
+    &.disable .minus {
+        opacity: 0.25;
+        cursor: not-allowed;
+    }
+}
+
+
+
+
+@media only screen and (max-device-width : 767px) {
+    .div-options-main-container {
+        text-align: center;
+        .plus, .minus {
+            margin: 20px 10px;
+
+            &:hover {
+                transform: none;
+            }
+        }
+
+        .plus {
+            border-radius: 5px;
+            width: 80%;
+            text-align: center;
+            padding: 8px;
+
+            &:after {
+                content: "  Add";
+                width: 80%;
+            }
+        }
+    }
+    
+
+    .div-option {
+        text-align: center;
+        input[type="text"] {
+            width: 80%;   
+        }
+    }
+}

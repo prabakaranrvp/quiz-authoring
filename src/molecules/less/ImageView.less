@@ -1,0 +1,61 @@
+.div-imageview {
+    text-align: center;
+    button {
+        width: 25%;
+        margin: 5px auto;
+        min-width: 250px;
+    }
+}
+
+.div-imagePreview {
+    width: 80%;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.1s ease-in;
+    position: relative;
+    margin: 10px auto;
+    button {
+        width: 100%;
+        height: 40px;
+        opacity: 0;
+        transition: 0.1s linear;
+        position: absolute;
+        margin: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
+    }
+}
+
+.div-imagePreview.no-img {
+    display: none;
+}
+
+.div-imagePreview.img {
+    display: block;
+}
+
+
+.div-imagePreview.img:hover button {
+    opacity: 1;
+    background: rgba(197, 29, 29,0.85);
+}
+
+@media only screen and (max-device-width : 767px)  {
+    .div-imagePreview {
+        width: 100%;;
+
+        button {
+            opacity: 1;
+            width: 100%;
+            bottom: -15px;
+            background: rgba(197, 29, 29,0.85);
+        }
+    }
+}
+
+
+
+

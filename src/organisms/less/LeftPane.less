@@ -1,0 +1,103 @@
+
+.div-leftpane {
+    width: 30%;
+    background: rgba(70,130,180,1);
+    color: #ffffff;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 10px 2.5%;
+    box-sizing: border-box;
+
+    
+    .div-list-qns {
+        margin-bottom: 30px;
+
+        div {
+            padding: 0.25em 0;
+            cursor: pointer;
+
+            &:hover {
+                color: #eee;
+            }
+        }
+    }
+
+    .div-buttons {
+        text-align: center;
+    }
+
+}
+
+
+
+@media only screen and (max-device-width : 767px)  {
+
+    .div-leftpane {
+        left: -100%;
+        width: 100%;
+        z-index: 1;
+        // margin-top: 45px;
+        // height: calc(100vh - 6.5vh);
+        margin-top: 15%;
+        height: 90%;
+        box-sizing: border-box;
+        transition: 0.3s;
+
+        h2 {
+            display: none;
+        }
+
+        .div-list-qns div {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .div-buttons {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+
+            button {
+                width: 50%;
+                border-radius: 0;
+                margin: 0;
+                padding-top: 15px;
+                padding-bottom: 15px;
+
+                &:first-of-type {
+                    border-right: 0.5px solid #fff;
+                }
+            }
+        }
+    }
+
+    .App.opened {
+        .div-leftpane {
+            left: 0;
+            padding: 25px;
+        }
+
+        .icon-container {
+            div {
+                background-color: #fff;
+            }
+            .bar1 {
+                transform: rotate(-45deg) translate(-9px, 6px);
+            }
+
+            .bar2 {opacity: 0;}
+
+            .bar3 {
+                transform: rotate(45deg) translate(-9px, -8px);
+            }
+        }
+        
+
+    }
+
+}
