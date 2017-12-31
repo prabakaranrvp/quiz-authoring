@@ -57,7 +57,6 @@ export default class RightPane extends Component {
     handleChangeQuestion() {
         this.setState({'Question': this.refs.txtQuestion.value});
         this.props.updateQuestion({Question: this.refs.txtQuestion.value, Options: this.props.Qn.Options, imageURI: this.props.Qn.imageURI});
-        console.log(this.refs.txtQuestion.scrollHeight,this.refs.txtQuestion.offsetHeight);
         if(this.refs.txtQuestion.scrollHeight > this.refs.txtQuestion.offsetHeight)
             this.refs.txtQuestion.style.height = this.refs.txtQuestion.scrollHeight + 'px';
     }
